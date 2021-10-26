@@ -36,7 +36,27 @@ if(ev.keyCode==&#39;17&#39;){ checkCtrl=false } }).keydown(function(event){
 if(checkCtrl){
 if(event.keyCode==&#39;85&#39;){ return false; } } })
 </script> 
-    
+    <script type="text/javascript">
+
+var txt="Chào mừng bạn đến với https://www.thuthuat.xyz. Chúc các bạn có những giây phút vui vẻ";
+
+var espera=150;
+
+var refresco=null;
+
+function rotulo_title() {
+
+document.title=txt;
+
+txt=txt.substring(1,txt.length)+txt.charAt(0);
+
+refresco=setTimeout("rotulo_title()",espera);
+
+}
+
+rotulo_title();
+
+</script>
 </head>
 <body onkeydown="return false">
 
