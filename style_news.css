@@ -1,0 +1,287 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+*{
+
+  padding:  0;
+  margin:  0;
+  box-sizing: border-box;
+}
+body{
+  background: #fb97b9;
+}
+@media screen and (max-width: 992px) {
+  .container{
+   width: 80% !important;
+ }
+ #modal .card{
+  width: 90% !important;
+}
+}
+.container{
+  width:  40%;
+  margin:  0 auto;
+  height: 500px;
+  background: #ffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 6px;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.dog{
+  position: absolute;
+  bottom: -6px;
+
+}
+.dog img{
+  width: 150px;
+}
+.open-tab{
+  width: 100%;
+  height: 12px;
+  background: #ff4081; 
+  position: absolute;
+}
+.test{
+
+  opacity: 0;
+  transition: 1s;
+
+}
+.heart-first{
+  height: 100px;
+  width: 100px;
+  background: #f15489;
+  position: relative;
+  transition: 0.5s;
+}
+.heart-first:before{
+  content:'';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  left: 150%;
+  background-color: #f15489;
+}
+.heart-first:after{
+  content:'';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  right: 150%;
+  background-color: #f15489;
+}
+.heart{
+  height: 100px;
+  width: 100px;
+  background: #ff4081;
+  transform: rotate(45deg);
+  position: relative;
+  transition: 0.5s;
+  animation: examp 2s infinite;
+}
+.letter{
+  position: absolute;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  color:  #ffff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.letter p{
+  font-size: 23px;
+}
+.letter div{
+  text-align: center;
+  display: none;
+  padding: 6px;
+}
+#modal{
+  width: 100%;
+  height: 100%;
+  background: #000000a3;
+  z-index: 9;
+  position: absolute;
+  display: none;
+
+}
+#xem-video{
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 34px;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  cursor: pointer ;
+}
+#xem-video:hover{
+  animation: playview 2s infinite;
+}
+@keyframes playview{
+ 0%{
+    transform: scale(1.02);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  55%{
+    transform: scale(1.2);
+  }
+  60%{
+    transform: scale(1.1);
+  }
+  65%{
+    transform: scale(1.2);
+  }
+  70%{
+    transform: scale(1.1);
+  }
+  75%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1.0);
+  }
+}
+#modal .modal-inside{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+#video{
+  width: 100%;
+  height: 100%;
+}
+#modal .close{
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  padding: 12px;
+  border-radius: 6px;
+  background: #ededed;
+  border:  none;
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 7%);
+  z-index: 2;
+  cursor: pointer;
+}
+#modal .close{
+  background: #fff;
+}
+#modal .card{
+  width: 50%;
+  height: 500px;
+  background: #fff;
+  border-radius: 6px;
+  position: relative;
+}
+.text-info{
+  position: absolute;
+  transition: 0.5s;
+  animation: text 2s infinite;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  font-weight: bold;
+  font-size: 18px;
+  color:  #ffff;
+  cursor: pointer;
+  z-index: 1;
+}
+.heart:before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #ff4081;
+  border-radius: 50%;
+  top: -50%;
+}
+.heart:after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #ff4081;
+  border-radius: 50%;
+  right: 50%;
+}
+.zommer{
+  animation: zoom;
+  animation: zoom 1.6s;
+  animation-fill-mode: forwards;
+}
+@keyframes zoom{
+  0%{
+    transform: scale(2) rotate(45deg);
+  }
+  50%{
+    transform: scale(6) rotate(45deg);
+  }
+
+  100%{
+    transform: scale(9) rotate(45deg);
+  }
+}
+@keyframes examp{
+  0%{
+    transform: scale(1.02) rotate(45deg);
+  }
+  50%{
+    transform: scale(1.1) rotate(45deg);
+  }
+  55%{
+    transform: scale(1.2) rotate(45deg);
+  }
+  60%{
+    transform: scale(1.1) rotate(45deg);
+  }
+  65%{
+    transform: scale(1.2) rotate(45deg);
+  }
+  70%{
+    transform: scale(1.1) rotate(45deg);
+  }
+  75%{
+    transform: scale(1.2) rotate(45deg);
+  }
+  100%{
+    transform: scale(1.0) rotate(45deg);
+  }
+}
+@keyframes text{
+  0%{
+    transform: scale(1.02);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  55%{
+    transform: scale(1.2);
+  }
+  60%{
+    transform: scale(1.1);
+  }
+  65%{
+    transform: scale(1.2);
+  }
+  70%{
+    transform: scale(1.1);
+  }
+  75%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1.0);
+  }
+}
